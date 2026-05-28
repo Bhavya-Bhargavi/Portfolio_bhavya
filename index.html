@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuthika Bhavya Bhargavi - Senior Software Engineer | Bhavya.engineer</title>
+    <meta name="description" content="Senior Software Engineer with 8+ years of experience specializing in ReactJS, Node.js, TypeScript, Micro Frontends, and AI-Integrated Frontend workflows.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-grid-pattern"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <span class="logo-accent"><</span>
+                <span class="logo-text">Bhavya.engineer</span>
+                <span class="logo-accent">/></span>
+            </a>
+            
+            <nav class="nav-links" id="nav-menu">
+                <a href="#about" class="active">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="18.36" x2="5.64" y2="19.78"></line><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="#contact" class="cta-btn-nav">Contact Me</a>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section" id="hero">
+            <div class="hero-container">
+                <div class="hero-info">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Open to Senior Web Engineering Opportunities</span>
+                    </div>
+                    <h1 class="hero-name">Bhavya Bhargavi</h1>
+                    <div class="hero-title">Senior Software Engineer</div>
+                    <p class="hero-subtitle">
+                        Building scalable web applications with <strong>ReactJS, Node.js, TypeScript, and Micro Frontends</strong>. Experienced in optimizing enterprise platforms and implementing innovative <strong>AI-integrated frontend workflows</strong>.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#experience" class="btn-primary">View Career Timeline</a>
+                        <a href="#contact" class="btn-secondary">Let's Connect</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">React Yrs</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Node Yrs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-console">
+                    <div class="console-card">
+                        <div class="console-header">
+                            <div class="console-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="console-title">bhavya-resume-agent.sh</div>
+                            <div class="console-badge">ACTIVE</div>
+                        </div>
+                        <div class="console-body" id="chat-messages">
+                            <div class="chat-message system">
+                                <span class="msg-sender">[SYSTEM]:</span> Agent initialized. Hello! Ask me anything about Bhavya's full-stack development experience, enterprise domains, or core tech stack.
+                            </div>
+                            <div class="chat-message ai">
+                                <span class="msg-sender">[Bhavya_AI]:</span> Welcome! Tap a quick command below to instantly query my background.
+                            </div>
+                        </div>
+                        <div class="console-pills" id="pill-container">
+                            <button class="pill-btn" data-query="Who is Bhavya?">About Bhavya</button>
+                            <button class="pill-btn" data-query="What is her technical stack?">Core Stack</button>
+                            <button class="pill-btn" data-query="Show latest work at Capgemini">Latest Experience</button>
+                            <button class="pill-btn" data-query="How can I contact her?">Contact Details</button>
+                        </div>
+                        <div class="console-footer">
+                            <form id="chat-form" class="console-input-container">
+                                <span class="input-prompt">$</span>
+                                <input type="text" id="chat-input" placeholder="Ask about React, Node, Verizon, AI workflow..." autocomplete="off">
+                                <button type="submit" class="send-btn" aria-label="Send query">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-container">
+            <h2 class="section-title">Professional Profile</h2>
+            <div class="about-card">
+                <div class="about-content">
+                    <div class="about-bio">
+                        <p class="lead-text">
+                            I am a versatile <strong>Senior Software Engineer</strong> with over 8 years of robust experience delivering dynamic, high-performance web applications across diverse domains.
+                        </p>
+                        <p>
+                            My engineering approach balances clean, reusable architecture with user-centric functionality. I have a proven track record across the <strong>Telecom, Healthcare, and E-commerce</strong> sectors, modernizing legacy modules, configuring robust micro frontends, and deploying production-grade code.
+                        </p>
+                        <p>
+                            Beyond enterprise architecture, I design and experiment with <strong>AI-integrated frontend workflows</strong>, building interactive React interfaces powered by backend LLMs, exploring Retrieval-Augmented Generation (RAG) pipelines, and setting up automation orchestration.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="icon-wrapper primary">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <div>
+                                <h4>Scalable Frontend Architecture</h4>
+                                <p>Extensive experience with React, Redux, TypeScript, and Micro Frontends to boost development agility and maintainability.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="icon-wrapper secondary">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div>
+                                <h4>AI Prototyping & RAG</h4>
+                                <p>Hands-on development of automated text chunking, document ingestion, vector embeddings, and semantic search pipelines.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="icon-wrapper info">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <div>
+                                <h4>Cross-Functional Agility</h4>
+                                <p>Skilled in Agile environments, delivering tight client schedules while managing full-stack API mappings seamlessly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-container">
+            <h2 class="section-title">Career Timeline</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Apr 2026 – Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Senior Software Engineer</h3>
+                                <div class="company-name">Capgemini Technology Services India LTD</div>
+                            </div>
+                            <span class="client-badge">Telecom In-house Application</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li><strong>Scalable Architecture:</strong> Developing and maintaining a scalable components library tailored for telecom operations using React, Redux, and TypeScript.</li>
+                            <li><strong>Workflow Streamlining:</strong> Optimizing internal systems through high-efficiency form-builders and multi-service API integrations.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">ReactJS</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jul 2022 – Apr 2026</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Senior Software Developer</h3>
+                                <div class="company-name">Infinite Computer Solutions</div>
+                            </div>
+                            <span class="client-badge">Clients: Verizon / Elevance Health (Anthem)</span>
+                        </div>
+                        <div class="project-subsection">
+                            <h4 class="project-sub-title">Verizon Corp. — NPP Project (May 2025 – Apr 2026)</h4>
+                            <ul class="timeline-bullets">
+                                <li><strong>Component Optimization:</strong> Designed reusable frontend UI component architectures, yielding a 30% reduction in feature development cycles and unifying cross-project code consistency.</li>
+                                <li><strong>Full-Stack Micro Frontends:</strong> Programmed a decoupled micro frontend architecture layout using Python (FastAPI) and modern JavaScript integrations.</li>
+                                <li><strong>Codebase Modernization:</strong> Led the migration of legacy client packages to structured TypeScript, significantly minimizing runtime risks and stabilizing maintenance tracks.</li>
+                                <li><strong>API Orchestration:</strong> Teamed up with back-end engineers to define performant RESTful specifications, enhancing application data fetching logic.</li>
+                            </ul>
+                        </div>
+                        <div class="project-subsection">
+                            <h4 class="project-sub-title">Verizon Corp. — ONEOPS Project (Nov 2023 – Apr 2025)</h4>
+                            <ul class="timeline-bullets">
+                                <li><strong>Centralized Systems Operations:</strong> Built user-friendly dashboard portals with React and Material-UI to revolutionize real-time cloud infrastructure monitoring and incident control routines.</li>
+                                <li><strong>Database Schema & API Design:</strong> Constructed secure RESTful hooks communicating with relational backend stores (MySQL, PostgreSQL) deployed under AWS stacks.</li>
+                            </ul>
+                        </div>
+                        <div class="project-subsection">
+                            <h4 class="project-sub-title">Anthem (Elevance Health) — Healthcare Domain (Jul 2022 – Oct 2023)</h4>
+                            <ul class="timeline-bullets">
+                                <li><strong>Data Operations & Stability:</strong> Programmed internal modules tracking clinical facility data configurations, drastically enhancing systemic navigation routines and reporting reliability.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Python (FastAPI)</span>
+                            <span class="tech-tag">Micro Frontends</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Material-UI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Dec 2021 – Jul 2022</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Software Developer</h3>
+                                <div class="company-name">Agreeya Solutions India PVT LTD</div>
+                            </div>
+                            <span class="client-badge">Client Asset: Trademore (E-commerce)</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li><strong>UI Component Revamping:</strong> Implemented interactive feature cards and structured core page sub-elements using ReactJs for a prominent product trade-in platform in the US market.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">ReactJs</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5 / CSS3</span>
+                            <span class="tech-tag">UI Revamping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mar 2021 – Dec 2021</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Web Developer</h3>
+                                <div class="company-name">RIG Enterprise Applications Inc</div>
+                            </div>
+                            <span class="client-badge">Corporate Branding Platforms</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li><strong>End-to-End Execution:</strong> Managed development cycles for high-traffic branding platforms from initial wireframes down to final release pushes.</li>
+                            <li><strong>Optimization Loops:</strong> Debugged cross-browser compilation errors and script execution layouts to maximize asset delivery speed.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">jQuery</span>
+                            <span class="tech-tag">Web Optimization</span>
+                            <span class="tech-tag">Cross-Browser Sync</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Oct 2016 – Aug 2019 (Combined Track)</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Web Designer & UI Developer</h3>
+                                <div class="company-name">Graphycurry / Cloudmint Technologies</div>
+                            </div>
+                            <span class="client-badge">Creative Layouts & Early Web Flows</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li><strong>Interactive Engineering:</strong> Authored mobile-first structures utilizing the Bootstrap grid utility, responsive media queries, and clean stylesheet layers.</li>
+                            <li><strong>Animation Flow Design:</strong> Styled customized layouts packed with transitions and micro-interactions for elevated visual appeal.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">HTML5 & CSS3</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">jQuery</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="section-container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                
+                <div class="skills-category-card">
+                    <div class="card-glow"></div>
+                    <div class="category-header">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        <h3>AI & Prototyping Workflows</h3>
+                    </div>
+                    <div class="skill-tags-group">
+                        <span class="expert-tag">AI-Frontend Integration</span>
+                        <span class="expert-tag">RAG Pipelines</span>
+                        <span class="expert-tag">Semantic Search</span>
+                        <span class="expert-tag">Vector Embeddings</span>
+                        <span class="expert-tag">Text Chunking</span>
+                        <span class="expert-tag">Orchestration (n8n)</span>
+                        <span class="expert-tag">Prompt Engineering</span>
+                        <span class="expert-tag">External API Integrations</span>
+                    </div>
+                </div>
+
+                <div class="skills-category-card">
+                    <div class="category-header">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3>Frontend Engineering</h3>
+                    </div>
+                    <div class="skill-tags-group">
+                        <span class="expert-tag">ReactJS (4+ Yrs)</span>
+                        <span class="expert-tag">Redux / Redux Toolkit</span>
+                        <span class="expert-tag">TypeScript</span>
+                        <span class="expert-tag">Micro Frontends</span>
+                        <span class="expert-tag">JavaScript (ES6+)</span>
+                        <span class="expert-tag">Material-UI</span>
+                        <span class="expert-tag">Bootstrap</span>
+                        <span class="expert-tag">HTML5 & CSS3</span>
+                        <span class="expert-tag">jQuery</span>
+                    </div>
+                </div>
+
+                <div class="skills-category-card">
+                    <div class="category-header">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                        </svg>
+                        <h3>Backend & Databases</h3>
+                    </div>
+                    <div class="skill-tags-group">
+                        <span class="expert-tag">Node.js (2+ Yrs)</span>
+                        <span class="expert-tag">Express JS</span>
+                        <span class="expert-tag">Python 3</span>
+                        <span class="expert-tag">FastAPI</span>
+                        <span class="expert-tag">RESTful APIs</span>
+                        <span class="expert-tag">PostgreSQL</span>
+                        <span class="expert-tag">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="skills-category-card">
+                    <div class="category-header">
+                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                        <h3>Operations & Cloud</h3>
+                    </div>
+                    <div class="skill-tags-group">
+                        <span class="expert-tag">AWS Deployments</span>
+                        <span class="expert-tag">Git Version Control</span>
+                        <span class="expert-tag">Agile Development</span>
+                        <span class="expert-tag">Code Review Practices</span>
+                        <span class="expert-tag">Cross-Browser Optimization</span>
+                        <span class="expert-tag">Responsive Engineering</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="section-container">
+            <div class="projects-section-header">
+                <h2 class="section-title">Projects Showcase</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="telecom">Telecom</button>
+                    <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                    <button class="filter-btn" data-filter="ai">AI Experiments</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+                
+                <div class="project-card" data-categories="telecom">
+                    <div class="project-banner bg-gradient-telecom"></div>
+                    <div class="project-content">
+                        <span class="project-category-badge">Telecom / Architecture</span>
+                        <h3 class="project-card-title">NPP Portal (Verizon Corp.)</h3>
+                        <p class="project-card-description">
+                            An internal engineering platform aimed at centralizing enterprise form-building mechanisms and streaming async data services.
+                        </p>
+                        <ul class="project-card-bullets">
+                            <li>Accelerated development output timelines by 30% by developing high-performance reusable UI components.</li>
+                            <li>Migrated legacy JS files to TypeScript to enforce structural data consistency and suppress runtime crashes.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="p-tag">React</span>
+                            <span class="p-tag">Redux</span>
+                            <span class="p-tag">TypeScript</span>
+                            <span class="p-tag">Python Fast-API</span>
+                            <span class="p-tag">Micro Frontends</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-categories="telecom">
+                    <div class="project-banner bg-gradient-telecom"></div>
+                    <div class="project-content">
+                        <span class="project-category-badge">Telecom / Systems</span>
+                        <h3 class="project-card-title">OneOps Modernization</h3>
+                        <p class="project-card-description">
+                            A centralized monitoring and server event coordination management layout created to overhaul traditional network administration routines.
+                        </p>
+                        <ul class="project-card-bullets">
+                            <li>Constructed front-end data views using Material-UI and integrated secure backend REST endpoints.</li>
+                            <li>Engineered database tables with optimized queries on PostgreSQL and MySQL engines.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="p-tag">React</span>
+                            <span class="p-tag">Material-UI</span>
+                            <span class="p-tag">Node.js</span>
+                            <span class="p-tag">AWS</span>
+                            <span class="p-tag">SQL Databases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-categories="healthcare">
+                    <div class="project-banner bg-gradient-healthcare"></div>
+                    <div class="project-content">
+                        <span class="project-category-badge">Healthcare Domain</span>
+                        <h3 class="project-card-title">Facility Configuration Management (Anthem)</h3>
+                        <p class="project-card-description">
+                            Enterprise system built on React-Redux architectures to process, trace, and manage global customer and medical facility parameters.
+                        </p>
+                        <ul class="project-card-bullets">
+                            <li>Enhanced operational data quality and reliability structures for intelligent medical decision execution loops.</li>
+                            <li>Automated clinical tracking workflows to optimize navigation paths and simplify user interaction steps.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="p-tag">ReactJS</span>
+                            <span class="p-tag">Redux</span>
+                            <span class="p-tag">Workflow Automation</span>
+                            <span class="p-tag">UX Refinement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-categories="ai">
+                    <div class="project-banner bg-gradient-ai"></div>
+                    <div class="project-content">
+                        <span class="project-category-badge">AI Integration Experiments</span>
+                        <h3 class="project-card-title">Context-Aware RAG Sandbox</h3>
+                        <p class="project-card-description">
+                            Experimental environment bridging single-page responsive UI views directly with LLM inference engines.
+                        </p>
+                        <ul class="project-card-bullets">
+                            <li>Explored text chunking, document ingestion, and embedding arrays to construct semantic context search.</li>
+                            <li>Configured workflow automation via orchestration engines (n8n) with prompt tunings for structural answers.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="p-tag">React Frontend</span>
+                            <span class="p-tag">RAG Pipelines</span>
+                            <span class="p-tag">Vector Concepts</span>
+                            <span class="p-tag">n8n Orchestration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-categories="ecommerce">
+                    <div class="project-banner bg-gradient-enterprise"></div>
+                    <div class="project-content">
+                        <span class="project-category-badge">E-commerce Marketplace</span>
+                        <h3 class="project-card-title">Trademore Product Portal</h3>
+                        <p class="project-card-description">
+                            A highly active buy-and-sell product monetization marketplace operating within the United States enterprise region.
+                        </p>
+                        <ul class="project-card-bullets">
+                            <li>Involved deeply in revamp tracks, replacing aging components with dynamic web structures.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="p-tag">ReactJs</span>
+                            <span class="p-tag">JavaScript</span>
+                            <span class="p-tag">Component Design</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education" class="section-container">
+            <h2 class="section-title">Education & Credentials</h2>
+            <div class="edu-cert-grid">
+                
+                <div class="edu-container">
+                    <h3 class="subsection-title">Academic Background</h3>
+                    <div class="edu-card">
+                        <div class="edu-badge">MBA</div>
+                        <div class="edu-details">
+                            <h4>Masters of Business Administration</h4>
+                            <p class="edu-school">IGNOU, Visakhapatnam</p>
+                            <div class="edu-meta">
+                                <span>Completed: 2011 – 2013</span>
+                                <span class="divider">•</span>
+                                <span class="grade">Aggregate: 70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-badge">B.Sc</div>
+                        <div class="edu-details">
+                            <h4>Bachelor of Science</h4>
+                            <p class="edu-school">Andhra University, Visakhapatnam</p>
+                            <div class="edu-meta">
+                                <span>Completed: 2007 – 2010</span>
+                                <span class="divider">•</span>
+                                <span class="grade">Aggregate: 74%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-container">
+                    <h3 class="subsection-title">Professional Certifications</h3>
+                    <div class="cert-list">
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 16c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Generative AI & LLM Basics</h4>
+                                <p>Google Certification</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Advanced ReactJS Framework</h4>
+                                <p>Udemy Certification — Advanced Level</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4>AWS Cloud Infrastructure</h4>
+                                <p>Udemy Certification — Advanced Level</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Linguistic Proficiency</h4>
+                                <p>Fluent in English, Hindi, and Telugu</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="section-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-card-main">
+                <div class="contact-info-panel">
+                    <h3>Contact Information</h3>
+                    <p class="contact-pitch">
+                        Looking to scale your engineering team or discuss a role requiring solid React, TypeScript, and Full-Stack capability? Let's connect!
+                    </p>
+                    
+                    <div class="contact-details-list">
+                        <a href="tel:+918618600812" class="contact-detail-item">
+                            <div class="contact-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <span class="detail-label">Phone</span>
+                                <span class="detail-val">+91 8618600812</span>
+                            </div>
+                        </a>
+
+                        <a href="mailto:bhavyarobbi90@gmail.com" class="contact-detail-item">
+                            <div class="contact-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div>
+                                <span class="detail-label">Email</span>
+                                <span class="detail-val">bhavyarobbi90@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/bhavya-bhargavi-thuthika-5b1231115/" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+                            <div class="contact-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </div>
+                            <div>
+                                <span class="detail-label">LinkedIn</span>
+                                <span class="detail-val">linkedin.com/in/bhavya-bhargavi</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <span class="detail-label">Base Location</span>
+                                <span class="detail-val">Bangalore, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+    <h3>Quick Message</h3>
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form-element">
+         <input type="hidden" name="access_key" value="7d3323c3-0b2e-4e74-aa53-2a083c57d90e"> <!-- i got from w3forms-->
+        <input type="hidden" name="subject" value="New Portfolio Contact Form Submission">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" name="email" required placeholder="your.email@example.com">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="custom_subject" required placeholder="Job Opening / Collaboration Request">
+        </div>
+        <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" name="message" rows="5" required placeholder="Hi Bhavya, let's talk about scheduling an interview for..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary form-submit-btn">Send Message</button>
+        <div id="form-feedback" class="form-feedback-msg"></div>
+    </form>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <a href="#" class="footer-logo">
+                <span class="logo-accent"><</span>
+                <span class="logo-text">Bhavya.engineer</span>
+                <span class="logo-accent">/></span>
+            </a>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Thuthika Bhavya Bhargavi. All rights reserved.</p>
+                <p class="footer-tagline">Engineered with Precision • ReactJS & Web Architectures</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
